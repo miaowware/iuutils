@@ -1,0 +1,12 @@
+[package]
+name = "iuutils"
+version = "0.1.0"
+edition = "2018"
+
+[[bin]]
+name = "iu"
+path = "src/iu.rs"
+
+[dependencies]
+anyhow = "1.0.44"
+nix = "0.23.0"
