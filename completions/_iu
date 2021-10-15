@@ -1,0 +1,10 @@
+#compdef iu
+
+_iu() {
+    integer ret=1
+}
+
+_iu
+
+# you will need this
+# https://github.com/zsh-users/zsh-completions/blob/master/zsh-completions-howto.org#testing--debugging

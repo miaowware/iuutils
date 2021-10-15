@@ -2,6 +2,9 @@
 name = "iuutils"
 version = "0.1.0"
 edition = "2018"
+description = "Tool to safely allow running common file utils as a specific user/group suing SUID and SGID"
+license = "BSD-3-Clause"
+repository = "https://github.com/miaowware/iuutils"
 
 [[bin]]
 name = "iu"
