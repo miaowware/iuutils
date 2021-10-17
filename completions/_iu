@@ -1,10 +1,40 @@
 #compdef iu
 
-_iu() {
-    integer ret=1
-}
+local curcontext="$curcontext" state line _opts ret=1
 
-_iu
+_arguments -C \
+    '(- 1 *)'{-h,--help}'[Shows help information]' \
+    '(- 1 *)'{-V,--version}'[Shows the iuutils version]' \
+    '1: :->cmds' \
+    '*:: :->args' && ret=0
 
-# you will need this
-# https://github.com/zsh-users/zsh-completions/blob/master/zsh-completions-howto.org#testing--debugging
+case $state in
+    cmds)
+        _values "iuutils subcommand" \
+            'ls[List directory contents]' \
+            'cp[Copy]' \
+            'mv[Move]' \
+            'rm[Remove]' \
+            'ln[Link]' \
+            'mkdir[Create directory]' \
+            'touch[Create file]' \
+            'id[Shows the user and group IDs]' \
+            && ret=0
+        _arguments \
+            '(-h --help)'{-h,--help}'[Shows help information]' \
+            '(-V --version)'{-V,--version}'[Shows the iuutils version]' \
+            && ret=0
+        ;;
+    args)
+        case $line[1] in
+            (ls|cp|mv|rm|ln|mkdir|touch|id)
+                _dispatch $line[1] $line[1] && ret=0
+                ;;
+            *)
+                ret=1
+                ;;
+        esac
+        ;;
+esac
+
+return ret

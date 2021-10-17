@@ -133,7 +133,7 @@ fn full_help() {
     println!("\tcp\tCopy ({})", PATH_CP);
     println!("\tmv\tMove ({})", PATH_MV);
     println!("\trm\tRemove ({})", PATH_RM);
-    println!("\trm\tLink ({})", PATH_LN);
+    println!("\tln\tLink ({})", PATH_LN);
     println!("\tmkdir\tCreate directory ({})", PATH_MKDIR);
     println!("\ttouch\tCreate file ({})", PATH_TOUCH);
     println!("\nothers:");
