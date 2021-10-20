@@ -6,6 +6,7 @@ description = "Tool to safely allow running common file utils as a specific user
 authors = ["0x5c <dev@0x5c.io>"]
 license = "BSD-3-Clause"
 repository = "https://github.com/miaowware/iuutils"
+publish = false
 
 [[bin]]
 name = "iu"

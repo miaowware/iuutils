@@ -26,9 +26,9 @@ case $state in
             && ret=0
         ;;
     args)
-        case $line[1] in
+        case ${line[1]} in
             (ls|cp|mv|rm|ln|mkdir|touch|id)
-                _dispatch $line[1] $line[1] && ret=0
+                _dispatch "${line[1]}" "${line[1]}" && ret=0
                 ;;
             *)
                 ret=1
