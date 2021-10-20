@@ -1,0 +1,16 @@
+[package]
+name = "iuutils"
+version = "1.0.0"
+edition = "2018"
+description = "Tool to safely allow running common file utils as a specific user/group using SUID and SGID"
+authors = ["0x5c <dev@0x5c.io>"]
+license = "BSD-3-Clause"
+repository = "https://github.com/miaowware/iuutils"
+publish = false
+
+[[bin]]
+name = "iu"
+path = "src/iu.rs"
+
+[dependencies]
+nix = "0.23.0"
